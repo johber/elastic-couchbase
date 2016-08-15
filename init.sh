@@ -10,10 +10,6 @@ wait_for_start() {
     done
 }
 
-init_couchbase_template() {
-    curl -X PUT http://localhost:9200/_template/couchbase -d @couchbase_template.json
-}
-
 create_data_index() {
     curl -X PUT http://localhost:9200/data
 }
