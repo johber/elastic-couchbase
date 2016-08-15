@@ -6,7 +6,6 @@ path:
 couchbase.username: root
 couchbase.password: foobar
 couchbase.maxConcurrentRequests: 1024
-couchbase.keyFilter: org.elasticsearch.transport.couchbase.capi.RegexKeyFilter
-couchbase.keyFilter.type: exclude
-couchbase.keyFilter.keyFiltersRegex.archive: ^archive_.*$
-couchbase.keyFilter.keyFiltersRegex.version: ^version_.*$
+couchbase.typeSelector: org.elasticsearch.transport.couchbase.capi.GroupRegexTypeSelector
+couchbase.typeSelector.documentTypesRegex: ^(?<type>[a-zA-Z0-9]+)_.+$
+script.disable_dynamic: false
