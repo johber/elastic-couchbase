@@ -3,9 +3,10 @@ path:
   logs: /data/log
   plugins: /elasticsearch/plugins
   work: /data/work
-couchbase.username: root
-couchbase.password: foobar
+couchbase.username: $CB_USERNAME
+couchbase.password: $CB_PASSWORD
 couchbase.maxConcurrentRequests: 1024
 couchbase.typeSelector: org.elasticsearch.transport.couchbase.capi.GroupRegexTypeSelector
 couchbase.typeSelector.documentTypesRegex: ^(?<type>[a-zA-Z0-9]+)_.+$
-script.disable_dynamic: false
+script.inline: on
+script.indexed: on
